@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deshi Deals | Home</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <!-- <h1 class="text-pink-600 text-center font-extrabold text-3xl capitalize "> hello deshi deals  </h1> -->
+
+    <header class="shadow py-3">
+        <div class="logo flex justify-center gap-2 items-center">
+            <img src="./assets/logo.png" alt="" class="w-10">
+            <div class="flex flex-col">
+                <h1 class="text-2xl text-pink-500 font-bold capitalize"> deshi <span class=" text-pink-600">
+                        deals</span></h1>
+                <p class="text-gray-500 capitalize"> cheap Price , best quality </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-gray-100">
+        <section id="products-container" class="w-11/12 mx-auto py-10 grid grid-cols-12 gap-6">
+            <section id="product-box" class=" col-span-9">
+                <div class="kitchen">
+                    <h1 class="text-2xl font-bold mb-5"> Kitchenware </h1>
+                    <div class="kitchen-items grid grid-cols-3 gap-4 mx-5">
+                        <!-- product-cart-1  -->
+                        <div class="card bg-base-100  shadow-sm">
+                            <figure class=" bg-gray-200 m-5 rounded-xl">
+                                <img src="./assets/kitchen-1.png" alt="kitchen-1" class="rounded-xl py-5" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 id="card-title-1" class="card-title font-bold text-2xl card-title"> Cooking Stik</h2>
+                                <p>⭐⭐⭐⭐⭐</p>
+                                <p  class="text-gray-500 font-medium"> <span id="card-price-1 " class="card-price"> 45.00</span>TK</p>
+                                <div class="card-actions w-full">
+                                    <button id="cart-btn-1" class="btn bg-pink-500 w-full capitalize font-bold text-white cart-btn">add to
+                                        cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product-2  -->
+                        <div class="card bg-base-100  shadow-sm">
+                            <figure class=" bg-gray-200 m-5 rounded-xl">
+                                <img src="./assets/kitchen-2.png" alt="kitchen-1" class="rounded-xl py-5" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title font-bold text-2xl  card-title">Steel plate</h2>
+                                <p>⭐⭐⭐⭐⭐</p>
+                                <p class="text-gray-500 font-medium"> <span class="card-price"> 78.20</span>TK</p>
+                                <div class="card-actions w-full">
+                                    <button class="btn bg-pink-500 w-full capitalize font-bold text-white cart-btn">add to
+                                        cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-base-100  shadow-sm">
+                            <figure class=" bg-gray-200 m-5 rounded-xl">
+                                <img src="./assets/kitchen-3.png" alt="kitchen-1" class="rounded-xl py-5" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title font-bold text-2xl card-title">home Cooker</h2>
+                                <p>⭐⭐⭐⭐⭐</p>
+                                <p class="text-gray-500 font-medium"> <span  class="card-price"> 535.00</span>TK</p>
+                                <div class="card-actions w-full">
+                                    <button class="btn bg-pink-500 w-full capitalize font-bold text-white cart-btn">add to
+                                        cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <aside id="cart-box" class=" col-span-3">
+                <div class="bg-white p-5 rounded">
+                    <h2 class="font-bold mb-5"> Have Coupon ?</h2>
+                    <div class="join">
+                        <input class="input join-item" placeholder="Coupon Code" />
+                        <button class="btn join-item  bg-pink-500">Apply</button>
+                    </div>
+                </div>
+                <div class="cart-box bg-white mt-10 p-5">
+                    <h2 class="mb-4"> cart </h2>
+                    <div id="cart-container" class="space-y-4">
+ <!-- cart container ! cart add here -->
+                     
+                    </div>        
+                    <div>
+                        <button id="delete-btn" class="btn ">Delete</button>
+                        <h2  class="my-2"> Total Price : <span id="total-price">0</span> TK </h2>
+                        <h2> Total Quantity : <span id="total-quantity">0</span> Pcs </h2>
+                        <div class="card-actions w-full mt-4">
+                            <button class="btn bg-pink-500 w-full capitalize font-bold text-white">Make
+                                Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+    </main>
+    <script src="./script/index.js"></script>
+    <script src="./script/DOM.js"></script>
+</body>
+
+</html>
