@@ -8,11 +8,15 @@
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body>
     <!-- <h1 class="text-pink-600 text-center font-extrabold text-3xl capitalize "> hello deshi deals  </h1> -->
+
 
     <header class="shadow py-3">
         <div class="logo flex justify-center gap-2 items-center">
@@ -26,11 +30,20 @@
     </header>
 
     <main class="bg-gray-100">
+        <section class="fixed top-1/2 left-[80%] z-50 sm:hidden">
+            <div class=" bg-white relative " id="cart-icon"><i class="fa-solid fa-cart-shopping text-4xl "></i>
+                <span class="absolute -top-4 -right-0 text-2xl bg-white px-1 rounded-3xl" id="carts-quantity"> 0 </span>
+            </div>
+        </section>
+        <section>
+
+        </section>
         <section id="products-container" class="w-11/12 mx-auto py-10 flex flex-col sm:grid sm:grid-cols-12 gap-6">
-            <section id="product-box" class=" sm:col-span-9">
+            <section id="product-box" class="block sm:col-span-9">
                 <div class="kitchen">
                     <h1 class="text-2xl font-bold mb-5"> Kitchenware </h1>
-                    <div class="kitchen-items flex flex-wrap items-center justify-center sm:grid sm:grid-cols-3 gap-4 mx-auto">
+                    <div
+                        class="kitchen-items flex flex-wrap items-center justify-center sm:grid sm:grid-cols-3 gap-4 mx-auto">
                         <!-- product-cart-1  -->
                         <div class="card bg-base-100 w-80 shadow-sm">
                             <figure class=" bg-gray-200 m-5 rounded-xl">
@@ -86,7 +99,8 @@
                 <!-- product-box-2  -->
                 <div class="kitchen">
                     <h1 class="text-2xl font-bold mb-5"> furniture </h1>
-                    <div class="kitchen-items flex flex-wrap items-center justify-center sm:grid sm:grid-cols-3 gap-4 mx-auto">
+                    <div
+                        class="kitchen-items flex flex-wrap items-center justify-center sm:grid sm:grid-cols-3 gap-4 mx-auto">
                         <!-- product-cart-1  -->
                         <div class="card bg-base-100  w-80 shadow-sm">
                             <figure class=" bg-gray-200 m-5 rounded-xl">
@@ -140,7 +154,8 @@
                 </div>
                 <div class="kitchen">
                     <h1 class="text-2xl font-bold mb-5"> Sportswear </h1>
-                    <div class="kitchen-items flex flex-wrap items-center justify-center sm:grid sm:grid-cols-3 gap-4 mx-auto">
+                    <div
+                        class="kitchen-items flex flex-wrap items-center justify-center sm:grid sm:grid-cols-3 gap-4 mx-auto">
                         <!-- product-cart-1  -->
                         <div class="card bg-base-100  w-80 shadow-sm">
                             <figure class=" bg-gray-200 m-5 rounded-xl">
@@ -194,7 +209,8 @@
                     </div>
                 </div>
             </section>
-            <aside id="cart-box" class=" sm:col-span-3">
+            <aside id="cart-box"
+                class="fixed top-[15%] left-[15%] z-10 max-h-90 hidden overflow-y-auto bg-gray-200 sm:static sm:block sm:col-span-3">
                 <div class="bg-white p-5 rounded">
                     <h2 class="font-bold mb-5"> Have Coupon ?</h2>
                     <div class="join">
@@ -204,25 +220,40 @@
                 </div>
                 <div class="cart-box bg-white mt-10 p-5">
                     <h2 class="mb-4"> cart </h2>
-                    <div id="cart-container" class="space-y-4">
-                        <!-- cart container ! cart add here -->
-                          <!-- <div class="flex justify-between rounded-xl  bg-gray-200 p-4">
-                      
-                              <img src="${productImg}" alt="" class="w-10">
-  
-                      <div>
-                          <div> <button class="product-minus bg-red-600 border-2 p-4"> - </button> <span class="product-quantity"> 1 </span> <button class="product-add bg-red-600 border-2 p-4"> + </button></div>
-                          <div class="hidden"> <span > ${productPrice}</span> TK </div>
-                      </div>
-                  
-                          <div>
-                              <h2 class="font-bold cart-product-title"> ${productTitle}</h2>
-                              <h2 class="font-bold"> <span class="totalCostForOneItem">${productPrice}</span> TK</h2>
-                          </div>
-                         </div> -->
-
-                    </div>
                     <div>
+                        <div id="cart-container" class="space-y-4">
+                            <!-- cart container ! cart add here -->
+                            <!-- <div class="flex justify-between rounded-xl  bg-gray-200 p-4">
+                          
+                                  <img src="${productImg}" alt="" class="w-10">
+      
+                          <div>
+                              <div> <button class="product-minus bg-red-600 border-2 p-4"> - </button> <span class="product-quantity"> 1 </span> <button class="product-add bg-red-600 border-2 p-4"> + </button></div>
+                              <div class="hidden"> <span > ${productPrice}</span> TK </div>
+                          </div>
+                      
+                              <div>
+                                  <h2 class="font-bold cart-product-title"> ${productTitle}</h2>
+                                  <h2 class="font-bold"> <span class="totalCostForOneItem">${productPrice}</span> TK</h2>
+                              </div>
+                             </div> 
+     
+                          
+                                  <img src="${productImg}" alt="" class="w-10">
+      
+                          <div>
+                              <div> <button class="product-minus bg-red-600 border-2 p-4"> - </button> <span class="product-quantity"> 1 </span> <button class="product-add bg-red-600 border-2 p-4"> + </button></div>
+                              <div class="hidden"> <span > ${productPrice}</span> TK </div>
+                          </div>
+                      
+                              <div>
+                                  <h2 class="font-bold cart-product-title"> ${productTitle}</h2>
+                                  <h2 class="font-bold"> <span class="totalCostForOneItem">${productPrice}</span> TK</h2>
+                              </div>
+                             </div> -->
+                        
+                        
+                    </div>
                         <button id="delete-btn" class="btn bg-red-300">Clear </button>
                         <h2 class="my-2"> Total Price : <span id="total-price">0</span> TK </h2>
                         <h2> Total Quantity : <span id="total-quantity">0</span> Pcs </h2>
@@ -231,11 +262,10 @@
                                 Purchase</button>
                         </div>
                     </div>
-                </div>
             </aside>
         </section>
     </main>
-   
+
     <script src="./script/index.js"></script>
     <!-- <script src="./script/DOM.js"></script> -->
 </body>

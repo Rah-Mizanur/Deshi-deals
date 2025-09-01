@@ -1,4 +1,4 @@
-console.log(" hello DOM");
+// console.log(" hello DOM");
 
 function getElement(id) {
     const element = document.getElementById(id)
@@ -65,6 +65,9 @@ getElement("product-box").addEventListener("click", function (e) {
             cartContainer.append(newCart)
             updateTotalPrice();
             updateQuantity()
+            const cartsQuantity = getElement("carts-quantity")
+
+            cartsQuantity.innerText = getElement("total-quantity").innerText
         }
 
 
@@ -85,6 +88,9 @@ getElement("product-box").addEventListener("click", function (e) {
             totalPrice.innerText = Number(0)
             const quantity = getElement("total-quantity")
             quantity.innerText = Number(0)
+            const cartsQuantity = getElement("carts-quantity")
+
+            cartsQuantity.innerText = getElement("total-quantity").innerText
 
         })
 
@@ -131,6 +137,9 @@ function updateQuantity() {
         totalQuantity += Number(el.innerText)
     })
     getElement("total-quantity").innerText = Number(totalQuantity)
+    const cartsQuantity = getElement("carts-quantity")
+
+    cartsQuantity.innerText = getElement("total-quantity").innerText
 }
 
 function updateTotalPrice() {
@@ -141,3 +150,31 @@ function updateTotalPrice() {
     })
     getElement("total-price").innerText = Number(totalPrice).toFixed(2)
 }
+
+const cartIcon = getElement("cart-icon")
+
+cartIcon.addEventListener("click", () => {
+    const box = getElement("product-box")
+    if (box.classList.contains("block")) {
+        box.classList.remove("block")
+        box.classList.add("hidden")
+    }
+    else {
+        box.classList.remove("hidden")
+        box.classList.add("block")
+    }
+
+    const cartBox = getElement("cart-box")
+
+    if (cartBox.classList.contains("hidden")) {
+        cartBox.classList.remove("hidden")
+        cartBox.classList.add("block")
+    }
+    else {
+        cartBox.classList.remove("block")
+        cartBox.classList.add("hidden")
+    }
+
+})
+
+
